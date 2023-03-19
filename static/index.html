@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBA Standings</title>
+  <style>
+    body {
+      font: .88em/1.5 'Berkeley Mono Trial', monospace;
+      margin: auto;
+      max-width: 640px;
+      min-height: 100dvh;
+      padding: 0em 2rem;
+    }
+
+    .flex {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    ol {
+      list-style-position: inside;
+      margin-left: 0;
+      min-width: 300px;
+      padding-left: 0;
+    }
+
+    /* Colors from 10 up */
+    li:nth-child(-n+10) {
+      color: black;
+    }
+
+    /* default styling: 11-15 */
+    li {
+      border-bottom: 1px dotted gray;
+      color: lightslategray;
+      /* display: flex; */
+      /* justify-content: space-between; */
+      padding: .44em 0;
+    }
+
+    /* 6th seed */
+    li:nth-child(6) {
+      border-bottom: 1px solid gray;
+    }
+
+    /* 10th seed  */
+    li:nth-child(10) {
+      border-bottom: 3px double gray;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+
+    li span {
+      float: right;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🏀 NBA Standings</h1>
+
+  <div class="flex">
+    <div>
+      <h2>Western Conference</h2>
+      <ol id="western-conference"></ol>
+    </div>
+    <div>
+      <h2>Eastern Conference</h2>
+      <ol id="eastern-conference"></ol>
+    </div>
+  </div>
+
+  <script>
+    fetch('/data')
+      .then(response => response.json())
+      .then(data => {
+        let response = data.response[0];
+        let arr = [...response];
+        for (let i = 0; i <= arr.length; i++) {
+          if (arr[i].group.name == "Western Conference") {
+            let ol = document.getElementById("western-conference");
+            let li = document.createElement("li");
+            let span = document.createElement("span");
+
+            li.innerHTML = `${arr[i].team.name} <span>${arr[i].games.win.total}-${arr[i].games.lose.total}</span>`;
+            ol.appendChild(li)
+          }
+          if (arr[i].group.name == "Eastern Conference") {
+            let ol = document.getElementById("eastern-conference");
+            let li = document.createElement("li");
+
+            li.innerHTML = `${arr[i].team.name} <span>${arr[i].games.win.total}-${arr[i].games.lose.total}</span>`;
+            ol.appendChild(li)
+          }
+        }
+      });
+  </script>
+</body>
+
+</html>
