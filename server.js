@@ -17,6 +17,9 @@ liveReloadServer.server.once('connection', () => {
 const app = express();
 const port = 3000;
 
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, './views'));
+
 app.get('/data', (req, res) => {
   res.json(data);
 });
@@ -25,7 +28,7 @@ app.use(connectLivereload());
 app.use(express.static(path.join(__dirname, './static')));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, './index.html'));
+  res.render('pages/index', { pageTitle: 'NBA Standings' });
 });
 
 app.listen(port, () => {
