@@ -6,59 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NBA Standings</title>
-  <style>
-    body {
-      font: .88em/1.5 'Berkeley Mono Trial', monospace;
-      margin: auto;
-      max-width: 640px;
-      min-height: 100dvh;
-      padding: 0em 2rem;
-    }
-
-    .flex {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    ol {
-      list-style-position: inside;
-      margin-left: 0;
-      min-width: 300px;
-      padding-left: 0;
-    }
-
-    /* Colors from 10 up */
-    li:nth-child(-n+10) {
-      color: black;
-    }
-
-    /* default styling: 11-15 */
-    li {
-      border-bottom: 1px dotted gray;
-      color: lightslategray;
-      /* display: flex; */
-      /* justify-content: space-between; */
-      padding: .44em 0;
-    }
-
-    /* 6th seed */
-    li:nth-child(6) {
-      border-bottom: 1px solid gray;
-    }
-
-    /* 10th seed  */
-    li:nth-child(10) {
-      border-bottom: 3px double gray;
-    }
-
-    li:last-child {
-      border-bottom: none;
-    }
-
-    li span {
-      float: right;
-    }
-  </style>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>

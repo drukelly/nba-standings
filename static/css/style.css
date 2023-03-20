@@ -1,0 +1,58 @@
+:root {
+  --default-border-color: gray;
+  --text-color-going-to-the-playoffs: black;
+  --text-color-bottom-seeded: lightslategray;
+}
+
+body {
+  font: .88em/1.5 'Berkeley Mono Trial', monospace;
+  margin: auto;
+  max-width: 767px;
+  padding: 2rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+ol {
+  list-style-position: inside;
+  margin-left: 0;
+  min-width: 360px;
+  padding-left: 0;
+  border: 1px solid var(--default-border-color);
+  line-height: 3;
+}
+
+/* Colors from 10 up */
+li:nth-child(-n+10) {
+  color: var(--text-color-going-to-the-playoffs);
+}
+
+/* default styling: 11-15 */
+li {
+  border-bottom: 1px dotted var(--default-border-color);
+  color: var(--text-color-bottom-seeded);
+  padding-left: 1rem;
+}
+
+/* 6th seed */
+li:nth-child(6) {
+  border-bottom: 1px solid var(--default-border-color);
+}
+
+/* 10th seed  */
+li:nth-child(10) {
+  border-bottom: 3px double var(--default-border-color);
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li span {
+  border-left: 1px solid var(--default-border-color);
+  float: right;
+  padding: 0 .67rem;
+}
