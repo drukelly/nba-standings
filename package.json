@@ -1,7 +1,7 @@
 {
   "name": "nba-standings",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple landing page that displays the current year's NBA standings.",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
