@@ -2,6 +2,10 @@
   --default-border-color: gray;
   --text-color-going-to-the-playoffs: black;
   --text-color-bottom-seeded: lightslategray;
+  --gsw-royal-blue: #006bb6;
+  --gsw-gold: #fdb927;
+  --gsw-slate: #26282a;
+  --bos-green: #008348
 }
 
 body {
@@ -55,4 +59,14 @@ li span {
   border-left: 1px solid var(--default-border-color);
   float: right;
   padding: 0 .67rem;
+}
+
+li.fave-team-west {
+  background-color: var(--gsw-royal-blue);
+  color: var(--gsw-gold);
+}
+
+li.fave-team-east {
+  background-color: var(--bos-green);
+  color: white;
 }

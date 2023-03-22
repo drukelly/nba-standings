@@ -39,13 +39,18 @@
             let ol = document.getElementById("western-conference");
             let li = document.createElement("li");
             let span = document.createElement("span");
-
+            if (arr[i].team.name === "Golden State Warriors") {
+              li.classList.add("fave-team-west")
+            }
             li.innerHTML = `${arr[i].team.name} <span>${arr[i].games.win.total}-${arr[i].games.lose.total}</span>`;
             ol.appendChild(li)
           }
           if (arr[i].group.name == "Eastern Conference") {
             let ol = document.getElementById("eastern-conference");
             let li = document.createElement("li");
+            if (arr[i].team.name === "Boston Celtics") {
+              li.classList.add("fave-team-east")
+            }
 
             li.innerHTML = `${arr[i].team.name} <span>${arr[i].games.win.total}-${arr[i].games.lose.total}</span>`;
             ol.appendChild(li)
