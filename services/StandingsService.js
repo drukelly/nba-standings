@@ -1,15 +1,24 @@
 const fs = require('fs');
-const path = require('path');
+const util = require('util');
 
 const readFile = util.promisify(fs.readFile);
 
-class StandingService {
-  constructor(datafile) {
+class StandingsService {
+  constructor(datafile, conference) {
     this.datafile = datafile;
+    this.conference = conference;
   }
-  // Returns a list of Western Conference teams
 
-  // Returns a list of Eastern Conference teams
+  // Returns a list of based on conference teams
+  // async displayConferenceTeam() {
+  // const data = await this.getData();
+  // return data.filter(team => team.Conference === this.conference);
+  // }
+
+  async getStandings() {
+    const data = await this.getData();
+    return data;
+  }
 
   async getData() {
     const data = await readFile(this.datafile, "utf8");
@@ -17,4 +26,4 @@ class StandingService {
   }
 }
 
-module.exports = StandingService;
+module.exports = StandingsService;

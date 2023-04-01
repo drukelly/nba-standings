@@ -1,9 +1,9 @@
 const express = require('express');
 const path = require('path');
-const data = require('./data/nba-standings.json');
-
 const livereload = require('livereload');
 const connectLivereload = require('connect-livereload');
+
+const data = require('./data/nba-standings.json');
 
 const liveReloadServer = livereload.createServer();
 liveReloadServer.watch(path.join(__dirname, 'static'));
@@ -32,5 +32,6 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
+  // eslint-disable-next-line no-console
   console.log(`Example app listening at http://localhost:${port}`);
 });
