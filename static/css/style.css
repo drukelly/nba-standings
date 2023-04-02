@@ -1,5 +1,6 @@
 :root {
   --default-border-color: gray;
+  --border-radius: 8px;
   --text-color-going-to-the-playoffs: black;
   --text-color-bottom-seeded: #444;
   --gsw-royal-blue: #006bb6;
@@ -27,7 +28,7 @@ h1 {
 h2 {
   border: 1px solid var(--default-border-color);
   border-bottom: none;
-  border-radius: 8px 8px 0 0;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
   color: white;
   padding: .5rem 0;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, .5);
@@ -55,7 +56,7 @@ h2 {
 }
 
 ol {
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
   border: 1px solid var(--default-border-color);
   line-height: 3;
   list-style-position: inside;
@@ -95,11 +96,15 @@ li:first-child {
   border-top: none;
 }
 li:last-child {
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
-li.fave-team,
-li.fave-team + li {
+.fave-team {
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, .5);
+}
+
+.fave-team,
+.fave-team + li {
   border-top: none;
 }
 
@@ -119,6 +124,6 @@ li span {
   float: right;
 }
 
-li.fave-team span {
+.fave-team span {
   border-left: 1px solid rgba(255, 255, 255, .67);
 }
