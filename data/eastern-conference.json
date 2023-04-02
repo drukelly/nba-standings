@@ -1,0 +1,77 @@
+[
+    {
+        "team": "Milwaukee Bucks",
+        "wins": 55,
+        "losses": 22
+    },
+    {
+        "team": "Boston Celtics",
+        "wins": 54,
+        "losses": 24
+    },
+    {
+        "team": "Philadelphia 76ers",
+        "wins": 51,
+        "losses": 26
+    },
+    {
+        "team": "Cleveland Cavaliers",
+        "wins": 48,
+        "losses": 30
+    },
+    {
+        "team": "New York Knicks",
+        "wins": 45,
+        "losses": 33
+    },
+    {
+        "team": "Brooklyn Nets",
+        "wins": 42,
+        "losses": 35
+    },
+    {
+        "team": "Miami Heat",
+        "wins": 40,
+        "losses": 37
+    },
+    {
+        "team": "Toronto Raptors",
+        "wins": 38,
+        "losses": 39
+    },
+    {
+        "team": "Atlanta Hawks",
+        "wins": 38,
+        "losses": 39
+    },
+    {
+        "team": "Chicago Bulls",
+        "wins": 37,
+        "losses": 40
+    },
+    {
+        "team": "Washington Wizards",
+        "wins": 34,
+        "losses": 43
+    },
+    {
+        "team": "Indiana Pacers",
+        "wins": 34,
+        "losses": 44
+    },
+    {
+        "team": "Orlando Magic",
+        "wins": 33,
+        "losses": 44
+    },
+    {
+        "team": "Charlotte Hornets",
+        "wins": 26,
+        "losses": 52
+    },
+    {
+        "team": "Detroit Pistons",
+        "wins": 16,
+        "losses": 61
+    }
+]

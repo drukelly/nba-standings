@@ -1,7 +1,7 @@
 :root {
   --default-border-color: gray;
   --text-color-going-to-the-playoffs: black;
-  --text-color-bottom-seeded: lightslategray;
+  --text-color-bottom-seeded: rgb(23, 13, 13);
   --gsw-royal-blue: #006bb6;
   --gsw-gold: #fdb927;
   --gsw-slate: #26282a;
@@ -9,13 +9,14 @@
 }
 
 body {
-  font: .88em/1.5 'Berkeley Mono Trial', monospace;
+  font: .88em/1.5 'Berkeley Mono', monospace;
   margin: auto;
   max-width: 767px;
   padding: 2rem;
 }
 
-h1 {
+h1,
+h2 {
   text-align: center;
 }
 
@@ -67,7 +68,7 @@ li span {
 
 li.fave-team-west {
   background-color: var(--gsw-royal-blue);
-  color: var(--gsw-gold);
+  color: white;
 }
 
 li.fave-team-east {

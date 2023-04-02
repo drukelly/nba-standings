@@ -9,6 +9,7 @@
     <%= pageTitle %>
   </title>
   <link rel="stylesheet" href="/css/style.css">
+  <meta name="description" content="A simple landing page that displays the current year's NBA standings." />
 </head>
 
 <body>
@@ -17,44 +18,40 @@
 
   <div class="flex">
     <div>
-      <h2>Western Conference</h2>
-      <ol id="western-conference"></ol>
+      <%- include('../layout/conference', { conference: 'western' }) %>
     </div>
     <div>
-      <h2>Eastern Conference</h2>
-      <ol id="eastern-conference"></ol>
+      <%- include('../layout/conference', { conference: 'eastern' }) %>
     </div>
   </div>
-
   <script>
-    fetch('/data')
-      .then(response => response.json())
+    fetch('/conference/west')
+      .then(async response => response.json())
       .then(data => {
-        let response = data.response[0];
-        let arr = [...response];
-        for (let i = 0; i <= arr.length; i++) {
-          if (arr[i].group.name == "Western Conference") {
-            let ol = document.getElementById("western-conference");
-            let li = document.createElement("li");
-            let span = document.createElement("span");
-            if (arr[i].team.name === "Golden State Warriors") {
-              li.classList.add("fave-team-west")
-            }
-            li.innerHTML = `${arr[i].team.name} <span>${arr[i].games.win.total}-${arr[i].games.lose.total}</span>`;
-            ol.appendChild(li)
+        const conference = document.getElementById('western-conference');
+        data.forEach(team => {
+          const li = document.createElement('li');
+          if (team.team === "Golden State Warriors") {
+            li.classList.add('fave-team-west');
           }
-          if (arr[i].group.name == "Eastern Conference") {
-            let ol = document.getElementById("eastern-conference");
-            let li = document.createElement("li");
-            if (arr[i].team.name === "Boston Celtics") {
-              li.classList.add("fave-team-east")
-            }
-
-            li.innerHTML = `${arr[i].team.name} <span>${arr[i].games.win.total}-${arr[i].games.lose.total}</span>`;
-            ol.appendChild(li)
-          }
-        }
+          li.innerHTML = `${team.team} <span>${team.wins} / ${team.losses}</span>`;
+          conference.appendChild(li);
+        });
       });
+    fetch('/conference/east')
+      .then(async response => response.json())
+      .then(data => {
+        const conference = document.getElementById('eastern-conference');
+        data.forEach(team => {
+          const li = document.createElement('li');
+          if (team.team === "Boston Celtics") {
+            li.classList.add('fave-team-east');
+          }
+          li.innerHTML = `${team.team} <span>${team.wins} / ${team.losses}</span>`;
+          conference.appendChild(li);
+        });
+      });
+
   </script>
 </body>
 
