@@ -20,41 +20,38 @@
 
   <div class="flex">
     <div id="western-conference">
-      <%- include('../layout/conference', { conference: 'western' }) %>
+      <h2> Western Conference </h2>
+      <ol id="western-conference-teams">
+        <% westStandings.forEach(team=> {
+          if (team.name==="Golden State Warriors" ) { %>
+          <li class="fave-team">
+            <% } else { %>
+          <li>
+            <% } %>
+              <%= team.name %> <span>
+                  <%= team.wins %>&middot;<%= team.losses %>
+                </span>
+          </li>
+          <% }) %>
+      </ol>
     </div>
     <div id="eastern-conference">
-      <%- include('../layout/conference', { conference: 'eastern' }) %>
+      <h2> Eastern Conference </h2>
+      <ol id="eastern-conference-teams">
+        <% eastStandings.forEach(team=> {
+          if (team.name==="Boston Celtics" ) { %>
+          <li class="fave-team">
+            <% } else { %>
+          <li>
+            <% } %>
+              <%= team.name %> <span>
+                  <%= team.wins %>&middot;<%= team.losses %>
+                </span>
+          </li>
+          <% }) %>
+      </ol>
     </div>
   </div>
-  <script>
-    fetch('/conference/west')
-      .then(async response => response.json())
-      .then(data => {
-        const conference = document.getElementById('western-conference-teams');
-        data.forEach(team => {
-          const li = document.createElement('li');
-          if (team.team === "Golden State Warriors") {
-            li.classList.add('fave-team-west');
-          }
-          li.innerHTML = `${team.team} <span>${team.wins}&middot;${team.losses}</span>`;
-          conference.appendChild(li);
-        });
-      });
-    fetch('/conference/east')
-      .then(async response => response.json())
-      .then(data => {
-        const conference = document.getElementById('eastern-conference-teams');
-        data.forEach(team => {
-          const li = document.createElement('li');
-          if (team.team === "Boston Celtics") {
-            li.classList.add('fave-team-east');
-          }
-          li.innerHTML = `${team.team} <span>${team.wins}&middot;${team.losses}</span>`;
-          conference.appendChild(li);
-        });
-      });
-
-  </script>
 </body>
 
 </html>

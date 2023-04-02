@@ -98,25 +98,27 @@ li:last-child {
   border-radius: 0 0 8px 8px;
 }
 
-li span {
-  border-left: 1px solid var(--default-border-color);
-  float: right;
-  padding: 0 .67rem;
-}
-
-li.fave-team-west,
-li.fave-team-west + li,
-li.fave-team-east,
-li.fave-team-east + li {
+li.fave-team,
+li.fave-team + li {
   border-top: none;
 }
 
-li.fave-team-west {
+#western-conference .fave-team {
   background-color: var(--gsw-royal-blue);
   color: white;
 }
 
-li.fave-team-east {
+#eastern-conference .fave-team {
   background-color: var(--bos-green);
   color: white;
+}
+
+li span {
+  border-left: 1px solid var(--default-border-color);
+  padding: 0 .67rem;
+  float: right;
+}
+
+li.fave-team span {
+  border-left: 1px solid rgba(255, 255, 255, .67);
 }

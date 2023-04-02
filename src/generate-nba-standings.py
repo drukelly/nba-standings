@@ -37,14 +37,14 @@ def main():
     for team in theJSON:
         if team["group"]["name"] == "Western Conference":
             western_conf.append({
-                "team": team["team"]["name"],
+                "name": team["team"]["name"],
                 "wins": team["games"]["win"]["total"],
                 "losses": team["games"]["lose"]["total"]
             })
 
         elif team["group"]["name"] == "Eastern Conference":
             eastern_conf.append({
-                "team": team["team"]["name"],
+                "name": team["team"]["name"],
                 "wins": team["games"]["win"]["total"],
                 "losses": team["games"]["lose"]["total"]
             })

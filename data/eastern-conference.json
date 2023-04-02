@@ -1,76 +1,76 @@
 [
     {
-        "team": "Milwaukee Bucks",
+        "name": "Milwaukee Bucks",
         "wins": 55,
         "losses": 22
     },
     {
-        "team": "Boston Celtics",
+        "name": "Boston Celtics",
         "wins": 54,
         "losses": 24
     },
     {
-        "team": "Philadelphia 76ers",
+        "name": "Philadelphia 76ers",
         "wins": 51,
         "losses": 26
     },
     {
-        "team": "Cleveland Cavaliers",
+        "name": "Cleveland Cavaliers",
         "wins": 48,
         "losses": 30
     },
     {
-        "team": "New York Knicks",
+        "name": "New York Knicks",
         "wins": 45,
         "losses": 33
     },
     {
-        "team": "Brooklyn Nets",
+        "name": "Brooklyn Nets",
         "wins": 42,
         "losses": 35
     },
     {
-        "team": "Miami Heat",
+        "name": "Miami Heat",
         "wins": 41,
         "losses": 37
     },
     {
-        "team": "Toronto Raptors",
+        "name": "Toronto Raptors",
+        "wins": 39,
+        "losses": 39
+    },
+    {
+        "name": "Atlanta Hawks",
         "wins": 38,
         "losses": 39
     },
     {
-        "team": "Atlanta Hawks",
-        "wins": 38,
-        "losses": 39
-    },
-    {
-        "team": "Chicago Bulls",
+        "name": "Chicago Bulls",
         "wins": 37,
         "losses": 40
     },
     {
-        "team": "Washington Wizards",
+        "name": "Washington Wizards",
         "wins": 34,
         "losses": 43
     },
     {
-        "team": "Indiana Pacers",
+        "name": "Indiana Pacers",
         "wins": 34,
         "losses": 44
     },
     {
-        "team": "Orlando Magic",
+        "name": "Orlando Magic",
         "wins": 33,
         "losses": 44
     },
     {
-        "team": "Charlotte Hornets",
+        "name": "Charlotte Hornets",
         "wins": 26,
-        "losses": 52
+        "losses": 53
     },
     {
-        "team": "Detroit Pistons",
+        "name": "Detroit Pistons",
         "wins": 16,
         "losses": 61
     }
