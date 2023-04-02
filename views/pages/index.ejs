@@ -14,13 +14,15 @@
 
 <body>
 
-  <h1>🏀 <%= pageTitle %> 🏀</h1>
+  <h1>
+    <%= pageTitle %>
+  </h1>
 
   <div class="flex">
-    <div>
+    <div id="western-conference">
       <%- include('../layout/conference', { conference: 'western' }) %>
     </div>
-    <div>
+    <div id="eastern-conference">
       <%- include('../layout/conference', { conference: 'eastern' }) %>
     </div>
   </div>
@@ -28,26 +30,26 @@
     fetch('/conference/west')
       .then(async response => response.json())
       .then(data => {
-        const conference = document.getElementById('western-conference');
+        const conference = document.getElementById('western-conference-teams');
         data.forEach(team => {
           const li = document.createElement('li');
           if (team.team === "Golden State Warriors") {
             li.classList.add('fave-team-west');
           }
-          li.innerHTML = `${team.team} <span>${team.wins} / ${team.losses}</span>`;
+          li.innerHTML = `${team.team} <span>${team.wins}&middot;${team.losses}</span>`;
           conference.appendChild(li);
         });
       });
     fetch('/conference/east')
       .then(async response => response.json())
       .then(data => {
-        const conference = document.getElementById('eastern-conference');
+        const conference = document.getElementById('eastern-conference-teams');
         data.forEach(team => {
           const li = document.createElement('li');
           if (team.team === "Boston Celtics") {
             li.classList.add('fave-team-east');
           }
-          li.innerHTML = `${team.team} <span>${team.wins} / ${team.losses}</span>`;
+          li.innerHTML = `${team.team} <span>${team.wins}&middot;${team.losses}</span>`;
           conference.appendChild(li);
         });
       });

@@ -9,29 +9,58 @@
 }
 
 body {
-  font: .88em/1.5 'Berkeley Mono', monospace;
+  font: .75em/1.5 'Berkeley Mono', monospace;
   margin: auto;
-  max-width: 767px;
   padding: 2rem;
 }
 
 h1,
 h2 {
+  margin: 0;
   text-align: center;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  border: 1px solid var(--default-border-color);
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  color: white;
+  padding: .5rem 0;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, .5);
+}
+
+#western-conference > h2 {
+  background: rgb(233,81,252);
+  background: linear-gradient(45deg, rgba(233,81,252,1) 19%, rgba(247,216,34,1) 81%);
+}
+
+#eastern-conference > h2 {
+  background: rgb(95,174,183);
+  background: linear-gradient(45deg, rgba(95,174,183,1) 19%, rgba(109,125,245,1) 81%);
 }
 
 .flex {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 2rem;
+}
+
+.flex > div {
+  flex: max(360px, 100%/2 - 4rem);
 }
 
 ol {
-  list-style-position: inside;
-  margin-left: 0;
-  min-width: 360px;
-  padding-left: 0;
+  border-radius: 0 0 8px 8px;
   border: 1px solid var(--default-border-color);
   line-height: 3;
+  list-style-position: inside;
+  margin: 0;
+  padding-left: 0;
 }
 
 /* Colors from 10 up */
@@ -42,7 +71,7 @@ li:nth-child(-n+10) {
 /* Styling: 11-15 */
 li {
   background-color: lightgray;
-  border-bottom: 1px dotted var(--default-border-color);
+  border-top: 1px dotted var(--default-border-color);
   color: var(--text-color-bottom-seeded);
   padding-left: 1rem;
 }
@@ -53,23 +82,33 @@ li:nth-child(-n+10) {
 }
 
 /* 6th seed */
-li:nth-child(6) {
-  border-bottom: 1px solid var(--default-border-color);
+li:nth-child(7) {
+  border-top: 2px solid red;
 }
 
 /* 10th seed  */
-li:nth-child(10) {
-  border-bottom: 3px double var(--default-border-color);
+li:nth-child(11) {
+  border-top: 3px double var(--default-border-color);
 }
 
+li:first-child {
+  border-top: none;
+}
 li:last-child {
-  border-bottom: none;
+  border-radius: 0 0 8px 8px;
 }
 
 li span {
   border-left: 1px solid var(--default-border-color);
   float: right;
   padding: 0 .67rem;
+}
+
+li.fave-team-west,
+li.fave-team-west + li,
+li.fave-team-east,
+li.fave-team-east + li {
+  border-top: none;
 }
 
 li.fave-team-west {

@@ -15,7 +15,7 @@ app.set('views', path.join(__dirname, './views'));
 app.use(express.static(path.join(__dirname, './static')));
 
 app.get('/', (request, response) => {
-  response.render('pages/index', { pageTitle: "NBA Standings", data: { west, east } });
+  response.render('pages/index', { pageTitle: "NBA Standings" });
 });
 
 app.get('/conference/west', (request, response) => {
