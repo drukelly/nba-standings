@@ -27,11 +27,11 @@
     {
         "team": "Los Angeles Clippers",
         "wins": 41,
-        "losses": 37
+        "losses": 38
     },
     {
         "team": "New Orleans Pelicans",
-        "wins": 39,
+        "wins": 40,
         "losses": 38
     },
     {
@@ -52,7 +52,7 @@
     {
         "team": "Dallas Mavericks",
         "wins": 37,
-        "losses": 40
+        "losses": 41
     },
     {
         "team": "Utah Jazz",

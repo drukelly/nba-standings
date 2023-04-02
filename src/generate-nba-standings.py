@@ -49,9 +49,9 @@ def main():
                 "losses": team["games"]["lose"]["total"]
             })
 
-    with open("data/western-conference-teams.json", "w") as wc:
+    with open("data/western-conference.json", "w") as wc:
         json.dump(western_conf, wc, indent=4)
-    with open("data/eastern-conference-teams.json", "w") as ec:
+    with open("data/eastern-conference.json", "w") as ec:
         json.dump(eastern_conf, ec, indent=4)
 
     wc.close()

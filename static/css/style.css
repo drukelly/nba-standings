@@ -1,7 +1,7 @@
 :root {
   --default-border-color: gray;
   --text-color-going-to-the-playoffs: black;
-  --text-color-bottom-seeded: rgb(23, 13, 13);
+  --text-color-bottom-seeded: #444;
   --gsw-royal-blue: #006bb6;
   --gsw-gold: #fdb927;
   --gsw-slate: #26282a;
@@ -39,11 +39,17 @@ li:nth-child(-n+10) {
   color: var(--text-color-going-to-the-playoffs);
 }
 
-/* default styling: 11-15 */
+/* Styling: 11-15 */
 li {
+  background-color: lightgray;
   border-bottom: 1px dotted var(--default-border-color);
   color: var(--text-color-bottom-seeded);
   padding-left: 1rem;
+}
+
+/* Styling: 10 and up */
+li:nth-child(-n+10) {
+  background-color: white;
 }
 
 /* 6th seed */
