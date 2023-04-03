@@ -1,28 +1,28 @@
 [
     {
         "name": "Denver Nuggets",
-        "wins": 51,
+        "wins": 52,
         "losses": 26
     },
     {
         "name": "Memphis Grizzlies",
         "wins": 49,
-        "losses": 28
+        "losses": 29
     },
     {
         "name": "Sacramento Kings",
         "wins": 47,
-        "losses": 30
+        "losses": 31
     },
     {
         "name": "Phoenix Suns",
-        "wins": 42,
+        "wins": 43,
         "losses": 35
     },
     {
         "name": "Golden State Warriors",
         "wins": 41,
-        "losses": 37
+        "losses": 38
     },
     {
         "name": "Los Angeles Clippers",
@@ -36,42 +36,42 @@
     },
     {
         "name": "Los Angeles Lakers",
-        "wins": 39,
+        "wins": 40,
         "losses": 38
     },
     {
         "name": "Minnesota Timberwolves",
         "wins": 39,
-        "losses": 39
+        "losses": 40
     },
     {
         "name": "Oklahoma City Thunder",
         "wins": 38,
-        "losses": 40
+        "losses": 41
     },
     {
         "name": "Dallas Mavericks",
         "wins": 37,
-        "losses": 41
+        "losses": 42
     },
     {
         "name": "Utah Jazz",
         "wins": 36,
-        "losses": 41
+        "losses": 42
     },
     {
         "name": "Portland Trail Blazers",
-        "wins": 32,
+        "wins": 33,
         "losses": 45
     },
     {
         "name": "San Antonio Spurs",
-        "wins": 19,
+        "wins": 20,
         "losses": 58
     },
     {
         "name": "Houston Rockets",
         "wins": 19,
-        "losses": 59
+        "losses": 60
     }
 ]

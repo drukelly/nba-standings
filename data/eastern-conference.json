@@ -1,7 +1,7 @@
 [
     {
         "name": "Milwaukee Bucks",
-        "wins": 55,
+        "wins": 56,
         "losses": 22
     },
     {
@@ -12,21 +12,21 @@
     {
         "name": "Philadelphia 76ers",
         "wins": 51,
-        "losses": 26
+        "losses": 27
     },
     {
         "name": "Cleveland Cavaliers",
-        "wins": 48,
+        "wins": 49,
         "losses": 30
     },
     {
         "name": "New York Knicks",
-        "wins": 45,
+        "wins": 46,
         "losses": 33
     },
     {
         "name": "Brooklyn Nets",
-        "wins": 42,
+        "wins": 43,
         "losses": 35
     },
     {
@@ -41,28 +41,28 @@
     },
     {
         "name": "Atlanta Hawks",
-        "wins": 38,
+        "wins": 39,
         "losses": 39
     },
     {
         "name": "Chicago Bulls",
-        "wins": 37,
+        "wins": 38,
         "losses": 40
     },
     {
         "name": "Washington Wizards",
         "wins": 34,
-        "losses": 43
-    },
-    {
-        "name": "Indiana Pacers",
-        "wins": 34,
         "losses": 44
     },
     {
         "name": "Orlando Magic",
-        "wins": 33,
+        "wins": 34,
         "losses": 44
+    },
+    {
+        "name": "Indiana Pacers",
+        "wins": 34,
+        "losses": 45
     },
     {
         "name": "Charlotte Hornets",
@@ -72,6 +72,6 @@
     {
         "name": "Detroit Pistons",
         "wins": 16,
-        "losses": 61
+        "losses": 62
     }
 ]
