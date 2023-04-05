@@ -61,6 +61,8 @@ ol {
   line-height: 3;
   list-style-position: inside;
   margin: 0;
+  -webkit-mask-image: -webkit-linear-gradient(#000, transparent);
+  mask-image: linear-gradient(#000, transparent);
   padding-left: 0;
 }
 
@@ -99,6 +101,7 @@ li:last-child {
   border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
+/* Fave Team for each Conference */
 .fave-team {
   text-shadow: 1px 1px 0 rgba(0, 0, 0, .5);
 }
